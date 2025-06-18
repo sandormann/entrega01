@@ -1,5 +1,5 @@
 const express = require('express')
-const router = require('./routes/productos.js')
+const productsRouter = require('./routes/products.router.js')
 const app = express();
 
 const PORT = 8080;
@@ -7,7 +7,7 @@ const PORT = 8080;
 app.use(express.json())
 
 //Rutas
-app.use('/api',router)
+app.use('/api',productsRouter)
 
 //Puerto
 app.listen(PORT, () => {
